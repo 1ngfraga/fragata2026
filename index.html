@@ -58,6 +58,12 @@
         --yellow-soft: #ffeec0;
         --paper-line: rgba(36, 26, 21, 0.14);
         --shadow-ink: rgba(36, 26, 21, 0.35);
+        --purple: #9457e0;
+        --purple-dark: #5f2d9e;
+        --purple-soft: #ece0fa;
+        --green: #2fa860;
+        --green-dark: #1c7a41;
+        --green-soft: #dcf3e3;
       }
 
       *,
@@ -651,6 +657,112 @@
         --accent-dark: var(--yellow-dark);
         --accent-soft: var(--yellow-soft);
       }
+      .theme-purple {
+        --accent: var(--purple);
+        --accent-dark: var(--purple-dark);
+        --accent-soft: var(--purple-soft);
+      }
+      .theme-green {
+        --accent: var(--green);
+        --accent-dark: var(--green-dark);
+        --accent-soft: var(--green-soft);
+      }
+
+      /* ============ ITINERARIO (tabla resumen) ============ */
+      .itinerary-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 24px;
+        font-size: 14px;
+      }
+      .itinerary-table th {
+        text-align: left;
+        font-family: "Bungee";
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--cream);
+        background: var(--accent-dark);
+        padding: 10px 14px;
+      }
+      .itinerary-table th:first-child {
+        border-radius: 10px 0 0 0;
+      }
+      .itinerary-table th:last-child {
+        border-radius: 0 10px 0 0;
+      }
+      .itinerary-table td {
+        padding: 11px 14px;
+        border-bottom: 1px solid var(--paper-line);
+        vertical-align: top;
+      }
+      .itinerary-table tr.day-divider td {
+        background: var(--accent);
+        color: var(--cream);
+        font-family: "Bangers";
+        font-size: 21px;
+        letter-spacing: 0.5px;
+        padding: 9px 14px;
+        border-bottom: none;
+      }
+      .itin-time {
+        font-family: "Bangers";
+        color: var(--accent-dark);
+        font-size: 16px;
+        white-space: nowrap;
+      }
+      .itin-name {
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .itin-note {
+        color: var(--ink-soft);
+        font-size: 12.5px;
+      }
+
+      /* ============ TRUCOS (tutoriales) ============ */
+      .trucos-item {
+        margin-bottom: 26px;
+      }
+      .trucos-item h3 {
+        font-family: "Bangers";
+        font-size: 24px;
+        color: var(--accent-dark);
+        margin: 0 0 10px;
+      }
+      .trucos-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .trucos-list a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--ink);
+        background: var(--accent-soft);
+        border: 1.5px dashed var(--accent-dark);
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+      .trucos-list .yt-icon {
+        flex-shrink: 0;
+        font-size: 16px;
+      }
+      .trucos-list .yt-label {
+        flex: 1;
+      }
+      .trucos-list .yt-go {
+        flex-shrink: 0;
+        font-size: 12px;
+        color: var(--accent-dark);
+        white-space: nowrap;
+      }
 
       /* ============ RESPONSIVE ============ */
       @media (max-width: 720px) {
@@ -734,7 +846,7 @@
             <div class="tl-body">
               <h3>Recepción</h3>
               <p>
-                Te entregamos las llaves de tu cuarto — maletas a la
+                Te entregamos las llaves de tu cuarto. <br> Maletas a la
                 habitación y todo listo para arrancar el fin de semana.
               </p>
             </div>
@@ -753,7 +865,7 @@
                     Arrancamos como se debe: te damos la bienvenida y te
                     explicamos de qué va todo. </br>Aquí te contamos las
                     mecánicas de cada actividad y los horarios.</br>Y sí, cada
-                    actividad tiene premio. </br>
+                    actividad tiene <b>premio</b>. </br>
                   </p>
                 </div>
                 <img
@@ -771,7 +883,7 @@
                     alt="Premio de puntualidad"
                   />
                   Donde veas este ícono, significa que puedes pedir tu
-                  premio especial de puntualidad si toda tu familia está a
+                  <>premio especial de puntualidad si toda tu familia está a
                   la hora en punto — con hasta 10 min de tolerancia.
                   ¡Queremos que todos participen y que hagamos todas las
                   actividades juntos!
@@ -1525,6 +1637,279 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
             style="max-height: 529px; height: auto; width: auto; margin: 0 auto; display: block; filter: none; border-radius: 0;"
             src="images_web/mesa.png"
           />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ITINERARIO ============ -->
+    <section class="sheet page-break theme-purple">
+      <div class="halftone"></div>
+      <div class="accent-edge"></div>
+      <div class="sheet-inner">
+        <span class="eyebrow">Referencia rápida</span>
+        <h1 class="section-title display">Itinerario</h1>
+
+        <table class="itinerary-table">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Nombre</th>
+              <th>Nota</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="day-divider"><td colspan="3">Viernes</td></tr>
+            <tr>
+              <td class="itin-time">12:00 PM</td>
+              <td class="itin-name">Recepción</td>
+              <td class="itin-note">Entrega de cuartos</td>
+            </tr>
+            <tr>
+              <td class="itin-time">1:00 PM</td>
+              <td class="itin-name">Bienvenida a la Fragata 27</td>
+              <td class="itin-note">Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">2:00 PM</td>
+              <td class="itin-name">Comida</td>
+              <td class="itin-note">Buffet, Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">4:00 PM</td>
+              <td class="itin-name">Lilia cositas</td>
+              <td class="itin-note">Cerámica fría, Premio</td>
+            </tr>
+            <tr>
+              <td class="itin-time">4:30 PM</td>
+              <td class="itin-name">Torneo de Ping Pong y Futbolito</td>
+              <td class="itin-note">Premio</td>
+            </tr>
+            <tr>
+              <td class="itin-time">7:30 PM</td>
+              <td class="itin-name">Cena</td>
+              <td class="itin-note">Buffet, Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">9:00 PM</td>
+              <td class="itin-name">Copa Chavorruca: Torneos 90's</td>
+              <td class="itin-note">Age of Empires II, Canasta, Tetris, Rompecabezas, Cubo Rubik</td>
+            </tr>
+
+            <tr class="day-divider"><td colspan="3">Sábado</td></tr>
+            <tr>
+              <td class="itin-time">8:00 AM</td>
+              <td class="itin-name">NorAerobics</td>
+              <td class="itin-note">Música y baile</td>
+            </tr>
+            <tr>
+              <td class="itin-time">9:00 AM</td>
+              <td class="itin-name">Desayuno</td>
+              <td class="itin-note">Buffet, Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">11:00 AM</td>
+              <td class="itin-name">Sesión de Fotos</td>
+              <td class="itin-note">Mesa de cosas para la foto</td>
+            </tr>
+            <tr>
+              <td class="itin-time">12:00 PM</td>
+              <td class="itin-name">Rally Chavorruco</td>
+              <td class="itin-note">Yoyo, Trompo, Canicas, Matatena, Balero, Resortera</td>
+            </tr>
+            <tr>
+              <td class="itin-time">2:00 PM</td>
+              <td class="itin-name">Comida</td>
+              <td class="itin-note">Buffet, Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">3:30 PM</td>
+              <td class="itin-name">Tiempo Libre</td>
+              <td class="itin-note">Alberca, snacks</td>
+            </tr>
+            <tr>
+              <td class="itin-time">5:30 PM</td>
+              <td class="itin-name">Corre y se va corriendo. La lotería de la vida</td>
+              <td class="itin-note">Grupos, porra, ganador</td>
+            </tr>
+            <tr>
+              <td class="itin-time">7:30 PM</td>
+              <td class="itin-name">Cena</td>
+              <td class="itin-note">Buffet, Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">9:00 PM</td>
+              <td class="itin-name">Viva Piñata</td>
+              <td class="itin-note">Dulces y premio</td>
+            </tr>
+            <tr>
+              <td class="itin-time">10:00 PM</td>
+              <td class="itin-name">Aferrados Night</td>
+              <td class="itin-note">Karaoke, juegos de mesa</td>
+            </tr>
+
+            <tr class="day-divider"><td colspan="3">Domingo</td></tr>
+            <tr>
+              <td class="itin-time">9:00 AM</td>
+              <td class="itin-name">Desayuno</td>
+              <td class="itin-note">Buffet, Premio de puntualidad</td>
+            </tr>
+            <tr>
+              <td class="itin-time">10:30 AM</td>
+              <td class="itin-name">La Última Sorpresa</td>
+              <td class="itin-note">Reparto final de tazos</td>
+            </tr>
+            <tr>
+              <td class="itin-time">12:00 PM</td>
+              <td class="itin-name">Fin del Cassette</td>
+              <td class="itin-note">Checkout</td>
+            </tr>
+            <tr>
+              <td class="itin-time">1:00 PM</td>
+              <td class="itin-name">¡La misa está que arde… de bendiciones!</td>
+              <td class="itin-note">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ TRUCOS ============ -->
+    <section class="sheet page-break theme-green">
+      <div class="halftone"></div>
+      <div class="accent-edge"></div>
+      <div class="sheet-inner">
+        <span class="eyebrow">Rally Chavorruco</span>
+        <h1 class="section-title display">Trucos</h1>
+        <p style="margin-top: -10px; color: var(--ink-soft); font-size: 14.5px;">
+          Practica antes de llegar — dale clic a cualquier truco y te
+          llevamos a un video en YouTube que te enseña cómo hacerlo.
+        </p>
+
+        <div class="trucos-item">
+          <h3>Yoyo</h3>
+          <ul class="trucos-list">
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+hacer+truco+vuelta+al+mundo+yoyo" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">La vuelta al mundo</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+hacer+truco+el+perrito+yoyo" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">El perrito</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+hacer+truco+el+columpio+yoyo" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">El columpio</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+hacer+truco+el+elevador+yoyo" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">El elevador (extra)</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="trucos-item">
+          <h3>Trompo</h3>
+          <ul class="trucos-list">
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+bailar+trompo+en+la+palma+de+la+mano" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Girarlo y sostenerlo en la palma de la mano</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+lanzar+trompo+directo+a+la+palma+de+la+mano" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Lanzarlo directo a la palma (extra)</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="trucos-item">
+          <h3>Canicas</h3>
+          <ul class="trucos-list">
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+jugar+canicas+sacar+del+circulo" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Sacar la canica del círculo</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="trucos-item">
+          <h3>Matatena</h3>
+          <ul class="trucos-list">
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+jugar+matatenas+basico" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Rebota y atrapa, 7 piezas a agarrar</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+agarrar+las+7+matatenas+de+una+sola+rebotada" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Las 7 en una sola rebotada (extra)</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="trucos-item">
+          <h3>Balero</h3>
+          <ul class="trucos-list">
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+ensartar+la+bola+del+baleron+al+palo" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Ensartar la bola del cordón al palo</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+hacer+2+vueltas+seguidas+en+el+baleron" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">2 vueltas seguidas en el palo (extra)</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="trucos-item">
+          <h3>Resortera</h3>
+          <ul class="trucos-list">
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+apuntar+y+tirar+con+resortera" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Puntería básica de tiro</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/results?search_query=como+tirar+el+tornillo+parado+con+resortera" target="_blank" rel="noopener">
+                <span class="yt-icon">▶️</span>
+                <span class="yt-label">Tirar el tornillo parado (extra)</span>
+                <span class="yt-go">Ver en YouTube ↗</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

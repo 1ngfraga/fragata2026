@@ -1,3 +1,14 @@
 .wrangler/
 node_modules/
 .DS_Store
+
+# Internal / private — never publish these
+.env
+.claude/
+_deploy/
+images/
+logo.jpeg
+logo.png
+Fragata2026_Manual_Operativo.*
+Fragata2026.xlsx
+COTIZACIÓN ABRAHAM FRAGA NOVIEMBRE 2026.pdf

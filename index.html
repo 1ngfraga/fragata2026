@@ -292,12 +292,20 @@
       @media (max-width: 640px) {
         .tl-split {
           grid-template-columns: 1fr;
+          justify-items: center;
         }
         .activity-grid {
           grid-template-columns: 1fr;
         }
         .activity-card {
           grid-template-columns: 1fr;
+          justify-items: center;
+        }
+        .meal-split {
+          justify-items: center;
+        }
+        .tl-photo {
+          margin: 5px 0;
         }
       }
       .activity-card p {
@@ -525,7 +533,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 32px;
         padding: 48px 20px;
         box-sizing: border-box;
       }
@@ -745,7 +753,7 @@
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 221px; background: #fff; transform: rotate(-2deg);"
+                  style="max-height: 221px; height: auto; width: auto; background: #fff; transform: rotate(-2deg);"
                   src="images_web/bienvenida_familia_polaroid.png"
                   alt="Foto instantánea de toda la familia levantando las manos"
                 />
@@ -785,7 +793,7 @@
               <div class="meal-split">
                 <img
                   class="meal-photo"
-                  style="height: 88px;"
+                  style="max-height: 88px; height: auto; width: auto;"
                   src="images_web/elote.png"
                   alt="Crema de elote"
                 />
@@ -820,7 +828,7 @@
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 200px;"
+                  style="max-height: 200px; height: auto; width: auto;"
                   src="images_web/manosalamasa.png"
                   alt="Llavero de cerámica fría estilo noventero"
                 />
@@ -839,15 +847,15 @@
                   <h3>Torneo de Ping Pong y Futbolito</h3>
                   <p>
                     Dos clásicos que nunca fallan: ping pong para los de
-                    reflejos rápidos y futbolito para los estrategas de
-                    mesa. Métete a la mesa que quieras, reta a quien se
+                    reflejos rápidos y futbolito para los deportistas de
+                    mano. Métete a la mesa que quieras, reta a quien se
                     deje y ve subiendo hasta la final — 1º, 2º y 3er lugar
                     de cada juego se llevan premio.
                   </p>
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 200px;"
+                  style="max-height: 200px; height: auto; width: auto;"
                   src="images_web/pingpong_futbolito.png"
                   alt="Paleta de ping pong y futbolito"
                 />
@@ -877,7 +885,7 @@
                 />
               </div>
               <div class="meal-split">
-                <img class="meal-photo" style="height: 73px;" src="images_web/atole.png" alt="Atole" />
+                <img class="meal-photo" style="max-height: 73px; height: auto; width: auto;" src="images_web/atole.png" alt="Atole" />
                 <p class="menu-copy">
                   Cierra el día con otro buffet: <b>sopa</b>, <b>crema</b> y
                   <b>ensalada</b> al gusto, <b>3 proteínas</b> y
@@ -919,7 +927,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 260px;"
+                    style="max-height: 260px; height: auto; width: auto;"
                     src="images_web/torneos/age_of_empires.png"
                     alt="Monje gritando Wololo"
                   />
@@ -936,7 +944,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 260px;"
+                    style="max-height: 260px; height: auto; width: auto;"
                     src="images_web/torneos/canasta.png"
                     alt="Viejita bajando un 3 y gritando Tapón"
                   />
@@ -957,7 +965,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 260px;"
+                    style="max-height: 260px; height: auto; width: auto;"
                     src="images_web/torneos/tetris.png"
                     alt="Pantalla dividida de competencia de Tetris"
                   />
@@ -973,7 +981,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 260px;"
+                    style="max-height: 260px; height: auto; width: auto;"
                     src="images_web/torneos/rompecabezas.png"
                     alt="Pieza de rompecabezas"
                   />
@@ -992,7 +1000,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 260px;"
+                    style="max-height: 260px; height: auto; width: auto;"
                     src="images_web/torneos/cubo_rubik.png"
                     alt="Cubo Rubik"
                   />
@@ -1035,7 +1043,7 @@
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 177px;"
+                  style="max-height: 177px; height: auto; width: auto;"
                   src="images_web/zumba_nora.png"
                   alt="Conejita bailando aeróbics ochentero"
                 />
@@ -1059,7 +1067,7 @@
                 />
               </div>
               <div class="meal-split">
-                <img class="meal-photo" style="height: 96px;" src="images_web/huevo.png" alt="Huevos al gusto" />
+                <img class="meal-photo" style="max-height: 96px; height: auto; width: auto;" src="images_web/huevo.png" alt="Huevos al gusto" />
                 <p class="menu-copy">
                   Empieza el día con <b>fruta mixta</b> (papaya, melón, piña y
                   sandía), <b>jugo de naranja</b> y <b>huevos al gusto</b> — con
@@ -1100,7 +1108,7 @@
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 300px;"
+                  style="max-height: 300px; height: auto; width: auto;"
                   src="images_web/session.png"
                   alt="Pareja posando dentro de un marco hecho de CDs"
                 />
@@ -1136,7 +1144,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 139px;"
+                    style="max-height: 139px; height: auto; width: auto;"
                     src="images_web/pinatas/yoyo.png"
                     alt="Piñata de yoyo"
                   />
@@ -1155,7 +1163,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 126px;"
+                    style="max-height: 126px; height: auto; width: auto;"
                     src="images_web/pinatas/trompo.png"
                     alt="Piñata de trompo"
                   />
@@ -1173,7 +1181,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 128px;"
+                    style="max-height: 128px; height: auto; width: auto;"
                     src="images_web/pinatas/canicas.png"
                     alt="Piñata de canica"
                   />
@@ -1192,7 +1200,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 135px;"
+                    style="max-height: 135px; height: auto; width: auto;"
                     src="images_web/pinatas/matatena.png"
                     alt="Piñata de matatena"
                   />
@@ -1211,7 +1219,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 138px;"
+                    style="max-height: 138px; height: auto; width: auto;"
                     src="images_web/pinatas/balero.png"
                     alt="Piñata de balero"
                   />
@@ -1231,7 +1239,7 @@
                   </div>
                   <img
                     class="activity-photo"
-                    style="height: 139px;"
+                    style="max-height: 139px; height: auto; width: auto;"
                     src="images_web/pinatas/resortera.png"
                     alt="Piñata de resortera"
                   />
@@ -1259,7 +1267,7 @@
                 />
               </div>
               <div class="meal-split">
-                <img class="meal-photo" style="height: 75px;" src="images_web/pollito.png" alt="Pollo asado" />
+                <img class="meal-photo" style="max-height: 75px; height: auto; width: auto;" src="images_web/pollito.png" alt="Pollo asado" />
                 <p class="menu-copy">
                   Recarga energías con <b>sopa</b>, <b>crema</b> y
                   <b>ensalada</b> para armar a tu gusto, <b>3 proteínas</b> y
@@ -1286,7 +1294,7 @@
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 168px;"
+                  style="max-height: 168px; height: auto; width: auto;"
                   src="images_web/puerquito_alberca.png"
                   alt="Puerquito saltando a la alberca"
                 />
@@ -1313,7 +1321,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 311px;"
+                  style="max-height: 311px; height: auto; width: auto;"
                   src="images_web/juegodelavida.png"
                   alt="Artistas de PerroLiebre Arte Escénico cantando"
                 />
@@ -1337,7 +1345,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 />
               </div>
               <div class="meal-split">
-                <img class="meal-photo" style="height: 80px;" src="images_web/ensalada.png" alt="Ensalada" />
+                <img class="meal-photo" style="max-height: 80px; height: auto; width: auto;" src="images_web/ensalada.png" alt="Ensalada" />
                 <p class="menu-copy">
                   Última comida del día: <b>sopa</b>, <b>crema</b> y
                   <b>ensalada</b> al gusto, <b>3 proteínas</b> y
@@ -1365,7 +1373,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 188px;"
+                  style="max-height: 188px; height: auto; width: auto;"
                   src="images_web/vivapinata.png"
                   alt="Piñata oficial de la Fragata"
                 />
@@ -1390,7 +1398,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 167px;"
+                  style="max-height: 167px; height: auto; width: auto;"
                   src="images_web/aferrados_night.png"
                   alt="Personaje cantando karaoke a todo pulmón"
                 />
@@ -1426,7 +1434,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 />
               </div>
               <div class="meal-split">
-                <img class="meal-photo" style="height: 91px;" src="images_web/chilaquiles.png" alt="Chilaquiles" />
+                <img class="meal-photo" style="max-height: 91px; height: auto; width: auto;" src="images_web/chilaquiles.png" alt="Chilaquiles" />
                 <p class="menu-copy">
                   Para el último desayuno: <b>jugo de mandarina</b> y fruta
                   fresca, <b>huevos</b> campiranos — o con jamón, salchicha o
@@ -1455,7 +1463,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 213px;"
+                  style="max-height: 213px; height: auto; width: auto;"
                   src="images_web/caja_sorpresa.png"
                   alt="Caja sorpresa"
                 />
@@ -1491,7 +1499,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
                 </div>
                 <img
                   class="tl-photo"
-                  style="height: 213px;"
+                  style="max-height: 213px; height: auto; width: auto;"
                   src="images_web/pato_papa.png"
                   alt="Pato vestido de Papa dando la bendición"
                 />
@@ -1509,7 +1517,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
 
           <img
             class="tl-photo"
-            style="height: 529px; margin: 0 auto; display: block; filter: none; border-radius: 0;"
+            style="max-height: 529px; height: auto; width: auto; margin: 0 auto; display: block; filter: none; border-radius: 0;"
             src="images_web/mesa.png"
           />
         </div>

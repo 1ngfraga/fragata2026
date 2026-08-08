@@ -549,11 +549,6 @@
         color: var(--cream);
         position: relative;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
         padding: 48px 20px;
         box-sizing: border-box;
       }
@@ -569,13 +564,20 @@
         );
       }
       .cover-logo {
-        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: min(340px, 58vw);
         z-index: 2;
         filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.25));
       }
       .cover-text {
-        position: relative;
+        position: absolute;
+        top: calc(50% + min(340px, 58vw) / 2 + 22px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
         z-index: 2;
         display: flex;
         flex-direction: column;
@@ -606,7 +608,11 @@
         color: var(--yellow-soft);
       }
       .cover-foot {
-        position: relative;
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+        width: 100%;
         z-index: 2;
         font-family: "Baloo 2";
         font-size: 12.5px;
@@ -842,7 +848,6 @@
         <div class="cover-dates">20, 21 y 22 de noviembre 2026</div>
         <div class="cover-venue">Best Western Plus · Posada Don Vasco</div>
       </div>
-      <div class="cover-foot">Tres días, dos noches — pura diversión.</div>
     </section>
 
     <!-- ============ VIERNES ============ -->
@@ -876,7 +881,10 @@
             <div class="tl-body">
               <div class="tl-split">
                 <div class="tl-text">
-                  <h3>Bienvenida a la Fragata 27</h3>
+                  <h3>Bienvenida a la Fragata 27
+                    <img class="punctuality-badge" src="images_web/puntualidad.png" alt="Premio de puntualidad" />
+
+                  </h3>
                   <p>
                     Arrancamos como se debe: te damos la bienvenida y te
                     explicamos de qué va todo. </br>Aquí te contamos las
@@ -980,11 +988,11 @@
               <div class="tl-split">
                 <div class="tl-text">
                   <div class="tl-head">
-                    <h3>Torneo de Ping Pong y Futbolito</h3>
+                    <h3>Rucolympics</h3>
                     <img class="punctuality-badge" src="images_web/puntualidad.png" alt="Premio de puntualidad" />
                   </div>
                   <p>
-                    Eliminación directa, ganas al tercer punto de diferencia y solo tú pasas a la siguiente ronda. Métete a la mesa que quieras — 1º, 2º y 3er lugar
+                    Habrá torneo de ping pong y futbolito. Eliminación directa, ganas al tercer punto de diferencia y solo tú pasas a la siguiente ronda. Métete a la mesa que quieras — 1º, 2º y 3er lugar
                     de cada juego se llevan <b>premio</b>.</br>
                     El futbolito se juega en parejas, las parejas se forman al azar, y el ping pong es individual.
                   </p>
@@ -1711,7 +1719,7 @@ juegos más arraigados de nuestra cultura: ¡La lotería!
             </tr>
             <tr>
               <td class="itin-time">4:30 PM</td>
-              <td class="itin-name">Torneo varios</td>
+              <td class="itin-name">Rucolympics</td>
               <td class="itin-note">Ping Pong, Futbolito, etc, <img class="itin-badge" src="images_web/puntualidad.png" alt="Premio de puntualidad" /></td>
             </tr>
             <tr>
